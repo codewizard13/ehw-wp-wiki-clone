@@ -100,27 +100,31 @@ function purge_cache_callback()
  *  - https://wordpress.stackexchange.com/questions/238668/how-to-add-some-custom-html-into-wordpress-admin-bar
  *  - https://wordpress.stackexchange.com/questions/403752/fastest-way-of-counting-posts-of-a-custom-post-type-in-a-specific-taxonomy-term
  *  - https://wp-kama.com/function/wp_count_posts
+ *  - https://stackoverflow.com/questions/67809404/use-a-parameter-in-an-add-action-function
+ *  - https://developer.wordpress.org/reference/functions/do_action_ref_array/
+ *  - https://developer.wordpress.org/reference/functions/do_action/
+ *  - https://stackoverflow.com/questions/2843356/can-i-pass-arguments-to-my-function-through-add-action
  * 
  */
-add_action('admin_bar_menu', 'ehw_adminbar_add_cpt_count', 900, 2);
-do_action('admin_bar_menu', $arg1, $arg2);
+// add_action('admin_bar_menu', 'ehw_adminbar_add_cpt_count', 900, 2);
+// // do_action('ehw_adminbar_add_cpt_count', $wp_admin_bar, 'videos');
 
-function ehw_adminbar_add_cpt_count($wp_admin_bar, $cpt_name)
-{
+// function ehw_adminbar_add_cpt_count($wp_admin_bar, $cpt_name)
+// {
 
-  $bgcolor = "navy";
+//   $bgcolor = "navy";
 
-  $cpt_posts_published = wp_count_posts($post_type = $cpt_name)->publish;
-  // echo "<pre>" . "wp_count_posts for videos: $cpt_posts_published" . "</pre>";
+//   $cpt_posts_published = wp_count_posts($post_type = $cpt_name)->publish;
+//   // echo "<pre>" . "wp_count_posts for videos: $cpt_posts_published" . "</pre>";
 
 
-  $admin_bar_args = array(
-    'id' => 'ehw_'. $cpt_name. '_count', // this is the ID of the section on the adminbar
-    'title' => "CPT Posts: $cpt_posts_published" // this is the visible portion in the admin bar.
-  );
+//   $admin_bar_args = array(
+//     'id' => 'ehw_'. $cpt_name. '_count', // this is the ID of the section on the adminbar
+//     'title' => "CPT Posts: $cpt_posts_published" // this is the visible portion in the admin bar.
+//   );
 
-  $wp_admin_bar->add_node($admin_bar_args);
-}
+//   $wp_admin_bar->add_node($admin_bar_args);
+// }
 
 
 
@@ -193,22 +197,22 @@ function ehw_adminbar_add_episodes_count($wp_admin_bar)
  *  - https://wordpress.stackexchange.com/questions/238668/how-to-add-some-custom-html-into-wordpress-admin-bar
  * 
  */
-add_action('admin_bar_menu', 'ehw_admin_bar_add_guests_count', 900);
+// add_action('admin_bar_menu', 'ehw_admin_bar_add_guests_count', 900);
 
-function ehw_admin_bar_add_guests_count($wp_admin_bar)
-{
+// function ehw_admin_bar_add_guests_count($wp_admin_bar)
+// {
 
-  $bgcolor = "navy";
+//   $bgcolor = "navy";
 
-  $guest_posts_published = wp_count_posts($post_type = 'guests')->publish;
+//   $guest_posts_published = wp_count_posts($post_type = 'guests')->publish;
 
-  $admin_bar_args = array(
-    'id' => 'ehw_guests_count',
-    'title' => "Guests: $guest_posts_published" // this is the visible portion in the admin bar.
-  );
+//   $admin_bar_args = array(
+//     'id' => 'ehw_guests_count',
+//     'title' => "Guests: $guest_posts_published" // this is the visible portion in the admin bar.
+//   );
 
-  $wp_admin_bar->add_node($admin_bar_args);
-}
+//   $wp_admin_bar->add_node($admin_bar_args);
+// }
 
 
 
