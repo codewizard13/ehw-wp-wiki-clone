@@ -1,0 +1,109 @@
+/*
+VIDEOS:
+______________________________________________________________________
+
+*/
+
+
+/* 
+    🛠️ HACK: Responsive YouTube embed sizing on Astra theme.
+
+*/
+.ast-oembed-container {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+}
+
+.ast-oembed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/* Responsive Rumble Vids
+- HEPPERLE - Changed 7/5/23 based on support rep hack 
+*/
+.ose-rumble\.com.ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+
+}
+
+.ose-rumble\.com.ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+
+
+/* EMBEDPRESS Responsive videos 
+  Eric Hepperle
+**/
+[class*=ose-rumble].ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+[class*=ose-rumble].ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+[class*=ose-youtube].ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+[class*=ose-youtube].ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+
+.ehw-oembed-rumble {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.ehw-oembed-rumble iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+.ehw-vid-embed {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.ehw-vid-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}

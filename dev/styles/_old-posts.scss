@@ -1,0 +1,119 @@
+/*
+OLD POSTS: Styles that apply to old posts including the re-created
+  post event descriptions.
+______________________________________________________________________
+
+*/
+
+/* OLD EVENT DESCRIPTIONS */
+
+.ehw-vid-info {
+  border: solid gainsboro;
+  padding: 1rem;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #141414;
+}
+
+
+.ehw-vid-info header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* HACK: Removes whitespace from extra P tags WordPress adds  */
+.ehw-vid-info p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.intro-content {
+  margin-bottom: 1rem;
+}
+
+.intro-content p {
+  text-align: left;
+  margin-bottom: .5rem !important;
+  line-height: 1.2rem;
+}
+
+.es-intro {
+  color: #000000;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+  display: block;
+}
+
+img.steve-pic {
+  height: 150px;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+  float: left;
+}
+
+.mcnButton {
+  border: 2px solid #707070;
+  border-radius: 5px;
+  background-color: teal;
+  padding: 1rem;
+  width: 90%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* HACK: Hides extra BR tags WordPress adds  */
+.mcnButton > br {
+  display: none
+}
+
+.mcnButton:hover {
+  background: teal;
+  opacity: 0.7;
+}
+
+.mcnButton a {
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 23px;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.ehw-vid-info footer {
+  margin-top: 1.2rem;;
+}
+.ehw-vid-info ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.es-title {
+  color: #f00;
+  font-size: 18px;
+}
+
+.founders-line {
+  color: #800000;
+  font-weight: bold;
+}
+
+.ehw-vid-info hr {
+  // width: 95%;
+  text-align: center;
+  margin-left: 0;
+  /* height: 2px; */
+  /* display: block; */
+  background: gainsboro;
+  margin: .8rem auto;
+}
+

@@ -1,0 +1,99 @@
+/*
+PLUGIN:  Echo Knowledge Base
+______________________________________________________________________
+   
+*/
+
+
+
+#eckb-article-content {
+
+  /* HEADINGS */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: .3rem 0 1rem 0;
+    padding: 0;
+  }
+
+  /* IMAGES */
+  img {
+    border: solid 1px gray;
+    box-shadow: 4px 4px 8px -2px #000000;
+  }
+
+  img.alignleft {
+    margin: 0;
+  }
+
+  img.alignright {
+    margin-left: 2.2rem;
+  }
+
+  .table-list {
+    row-gap: 0.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* HEADINGS */
+  h3[data-id^="articleTOC"] {
+    background: cadetblue;
+    color: white;
+    padding: .3rem .6rem;
+    margin: 1em 0;
+  }
+
+  /* 
+    MODULE: Table List
+    - A flex list of divs that look like table rows. Used with Echo Knowledge Base plugin
+  */
+  /* TABLE LIST ROW */
+  .table-list .eh-row {
+    background: gainsboro;
+    display: flex;
+    border-bottom: solid 1px brown;
+  }
+
+  .table-list .eh-col {
+    padding: 1em;
+  }
+
+  .table-list .eh-col:nth-of-type(2) {
+    flex: 1;
+    border-left: 1px solid;
+  }
+
+  .table-list img,
+  .table-list figure {
+    margin: 0;
+  }
+
+  .table-list img[class^="wp-image"] {
+    min-width: 120px;
+    margin: 0;
+  }
+
+  .table-list img[class^="wp-image"]+figcaption {
+    background: aliceblue;
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0.4rem;
+  }
+
+  .table-list ul,
+  .table-list ol {
+    margin-left: 1em;
+  }
+
+  .table-list img {
+    box-shadow: none;
+  }
+
+}

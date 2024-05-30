@@ -1,0 +1,93 @@
+/*
+PAGE: Testimonials
+______________________________________________________________________
+   
+*/
+
+/* TESTIMONIAL PG - FORM */
+
+/* Style form fields*/
+#ehw-testimonial-form input[id],
+#ehw-testimonial-form textarea,
+#ehw-testimonial-form select {
+  background: var(--e-global-color-1d6d86e);
+}
+
+#ehw-testimonial-form [id] .choices .choices__inner,
+#ehw-testimonial-form .choices .choices__list {
+  background: var(--e-global-color-1d6d86e);
+}
+
+
+
+/* TESTIMONIALS CAROUSEL */
+
+/* Add beginning and ending quotes on testimonials
+    - Disabled currently
+*/
+.testimonial .elementor-widget-theme-post-content {
+  font-family: Arial;
+  padding: 0.8rem;
+}
+
+.testimonial .elementor-widget-theme-post-content:before,
+.testimonial .elementor-widget-theme-post-content:after {
+  color: var(--e-global-color-03ec89f);
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  position: absolute;
+  font-size: 2rem;
+}
+
+.testimonial .elementor-widget-theme-post-content:before {
+  /*content: "\f10d";*/
+  /*content: '“';*/
+  /*left: -6px;*/
+  /*top: 9px;*/
+}
+
+.testimonial .elementor-widget-theme-post-content:after {
+  /*content: "\f10e";*/
+  /*content: '”';*/
+  /*right: -1px;*/
+  /*bottom: -2px;*/
+}
+
+
+/* GOTCHA: This section doesn't seem to apply to current iteration of the carousel
+    but, keep in case we need to reactivate later
+*/
+
+/* REMOVE left padding from active slide */
+#ehw-testimonials-carousel .swiper-slide-active {
+  padding-left: 0 !important;
+}
+
+/* REMOVE right padding from inner container in testimonial content */
+.testimonial .elementor-widget-theme-post-content .elementor-widget-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* HIGHLIGHT first testimonial in carousel  */
+/* APPLY drop shadow to current element */
+#ehw-testimonials-carousel .swiper-slide-active .ehw-testimonial--quote {
+  /*box-shadow: 2px 2px 6px #333;*/
+
+}
+
+/* PREVENT box shadow in testimonial carousel being cut off */
+#ehw-testimonials-carousel .swiper-slide {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: .6rem;
+  /*padding-right: .6rem;*/
+}
+
+/*  CHANGE margin-bottom in testimonails carousel from 1.6rem to 1rem (except the last child which should be zero)  */
+.entry-content #ehw-testimonials-carousel p:not(:last-child) {
+  margin-bottom: .8rem;
+}
+.entry-content #ehw-testimonials-carousel p:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,14 @@
+/*
+
+BUTTONS: Buttons
+______________________________________________________________________
+
+*/
+
+/* MAKE ICON appear on right side instead of left on Icon List
+    - Created for Testimonails pg
+*/
+.ehw-btn--icon-right .elementor-icon-list-icon {
+  order: 1;
+  margin-left: 1rem;
+}
