@@ -73,7 +73,7 @@ add_filter('acp/editing_column/post_views', function($column) {
 # 2024-05-30 - From: https://kinsta.com/blog/wordpress-hooks/
 
 // show a maintenance message for all your site visitors
-add_action( 'get_header', 'maintenance_message' );
+// add_action( 'get_header', 'maintenance_message' );
 function maintenance_message() {
     if (current_user_can( 'edit_posts' )) return;
     wp_die( '<h1>Stay Pawsitive!</h1><br>Sorry, we\'re temporarily down for maintenance right meow.' );
