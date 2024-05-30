@@ -37,11 +37,12 @@ function register_cpt_video() {
 		'show_in_rest'        => true,
 		'capability_type'     => 'post',
 		'hierarchical'        => true,
-		'has_archive'         => true,
+		'has_archive'         => 'videos',
 		'query_var'           => true,
 		'can_export'          => true,
 		'rewrite_no_front'    => false,
 		'show_in_menu'        => true,
+		'menu_position'       => 5,
 		'menu_icon'           => 'dashicons-video-alt3',
 		'supports' => [
 			'title',
@@ -53,7 +54,7 @@ function register_cpt_video() {
 			'category',
 			'post_tag',
 		],
-		'rewrite' => true
+		'rewrite' => [ 'slug' => 'videos' ]
 	];
 
 	register_post_type( 'video', $args );

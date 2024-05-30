@@ -122,3 +122,4 @@ function add_custom_post_type_to_admin_bar($post_type_singular, $post_type_plura
 
 // Example usage:
 add_custom_post_type_to_admin_bar('video', 'videos', false);
+add_custom_post_type_to_admin_bar('doc', 'docs', false);

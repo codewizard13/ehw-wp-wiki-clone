@@ -19,6 +19,7 @@ require_once (__DIR__ . '/inc/admin-sidebar.php');
 
 // CUSTOM POST TYPES
 require_once (__DIR__ . '/inc/cpt/cpt-video.php');
+require_once (__DIR__ . '/inc/cpt/cpt-doc.php');
 
 
 // ADMIN CPTS
