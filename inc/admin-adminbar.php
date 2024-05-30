@@ -92,7 +92,7 @@ function purge_cache_callback()
 
 /**
  * 
- * :: ADMINBAR: Add Videos CPT Count
+ * :: ADMINBAR: Add CPT Count
  * 
  * Add custom post type (CPT) count to admin bar.
  * 
@@ -102,20 +102,21 @@ function purge_cache_callback()
  *  - https://wp-kama.com/function/wp_count_posts
  * 
  */
-add_action('admin_bar_menu', 'ehw_adminbar_add_videos_count', 900);
+add_action('admin_bar_menu', 'ehw_adminbar_add_cpt_count', 900, 2);
+do_action('admin_bar_menu', $arg1, $arg2);
 
-function ehw_adminbar_add_videos_count($wp_admin_bar)
+function ehw_adminbar_add_cpt_count($wp_admin_bar, $cpt_name)
 {
 
   $bgcolor = "navy";
 
-  $video_posts_published = wp_count_posts($post_type = 'videos')->publish;
-  // echo "<pre>" . "wp_count_posts for videos: $video_posts_published" . "</pre>";
+  $cpt_posts_published = wp_count_posts($post_type = $cpt_name)->publish;
+  // echo "<pre>" . "wp_count_posts for videos: $cpt_posts_published" . "</pre>";
 
 
   $admin_bar_args = array(
-    'id' => 'ehw_videos_count',
-    'title' => "Videos: $video_posts_published" // this is the visible portion in the admin bar.
+    'id' => 'ehw_'. $cpt_name. '_count', // this is the ID of the section on the adminbar
+    'title' => "CPT Posts: $cpt_posts_published" // this is the visible portion in the admin bar.
   );
 
   $wp_admin_bar->add_node($admin_bar_args);
