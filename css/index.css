@@ -1,0 +1,485 @@
+@charset "UTF-8";
+/*
+Theme Name: EHW Wiki 2024 GeneratePlus Child
+Theme URI: https://erichepperle.com
+Template: generateplus
+Author: Eric Hepperle
+Author URI: https://erichepperle.com
+
+Description: A GeneratePlus child theme for the EHW Wiki website.
+
+Tags: custom-menu,custom-logo,entertainment,one-column,two-columns,left-sidebar,e-commerce,right-sidebar,custom-colors,editor-style,featured-images,full-width-template,microformats,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready,blog, KB, knowledge-base, wiki, intranet, internal
+Version: 5.21
+
+Updated: 2024-03-27
+
+TESTING ..
+
+*/
+/******** Table of contents ---------------------------------------
+
+-- base imports
+-- plugin imports
+
+*********/
+/*
+
+    [[[[[[[   ADMIN IMPORTS   ]]]]]]]
+
+*/
+/* 
+
+- Login and Admin Area Styles
+______________________________________________________________________
+
+*/
+form#loginform {
+  background: #CFE3E4; /* Azure (web) */
+  padding: 2rem 1.4rem 3rem;
+  border-radius: 2rem;
+  border: solid cadetblue 3px;
+}
+
+/*
+
+    [[[[[[[   BASE IMPORTS   ]]]]]]]
+
+*/
+/* 
+- Base Styles
+______________________________________________________________________
+
+*/
+/* NORMALIZE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ATOMIC ELEMENTS */
+/* Headings */
+/* COLORS */
+/* TYPOGRAPHY */
+/* 
+    🛠️ HACK: Remove margin bottom from (mostly) <P> tags in WordPress.
+    WordPress by default does something called wpautop() which has the
+    effect of adding extra margin-bottom where none is needed. 
+
+*/
+.ehw-mb0,
+.ehw-mb0 p:only-of-type,
+.ehw-mb0 p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/*
+PIX:  Images, Figures, Pix, Graphics
+______________________________________________________________________
+
+*/
+/* Images wrapped in a P tag */
+p:has(> img) {
+  margin: 0;
+}
+
+/* GALLERIES */
+.gallery-list {
+  background: lightseagreen;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 12.5rem);
+  grid-gap: 0.5em;
+}
+
+.gallery-list .eh-col {
+  padding: 0.5em;
+}
+
+.gallery-list .eh-col > * {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+BLOCKQUOTES: Quotes, messages, callouts
+______________________________________________________________________
+
+*/
+.eh-msg {
+  border: solid 2px;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  margin: 1rem 2rem 2rem 2rem;
+}
+
+.error {
+  color: brown;
+  background: pink;
+}
+
+/* BLOCKQUOTE: Error */
+.ehw-error {
+  border: solid 1px;
+  background: #834333;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ehw-error p {
+  margin-bottom: 0;
+}
+
+.ehw-error a {
+  color: orange;
+}
+
+.ehw-error a:hover {
+  opacity: 0.4;
+}
+
+/*
+MODULE STYLES
+- Description: Modules or components are made of multiple elements and can
+  have quite complex styles. Tables are complex enough that they can also be
+  considered a module. Not every HTML with multiple parts are in the MODULE
+  section (e.g., <figure> goes in pix.css). Modules aren't specific to
+  any page, but are somewhat universal.
+______________________________________________________________________
+
+*/
+/*
+VIDEOS:
+______________________________________________________________________
+
+*/
+/* 
+    🛠️ HACK: Responsive YouTube embed sizing on Astra theme.
+
+*/
+.ast-oembed-container {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+}
+
+.ast-oembed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/* Responsive Rumble Vids
+- HEPPERLE - Changed 7/5/23 based on support rep hack 
+*/
+.ose-rumble\.com.ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.ose-rumble\.com.ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/* EMBEDPRESS Responsive videos 
+  Eric Hepperle
+**/
+[class*=ose-rumble].ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+[class*=ose-rumble].ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+[class*=ose-youtube].ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+[class*=ose-youtube].ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+.ehw-oembed-rumble {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.ehw-oembed-rumble iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+.ehw-vid-embed {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.ehw-vid-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/*
+SIDEBARS:
+______________________________________________________________________
+
+*/
+/* SIDEBAR 
+Align all children left. Needed to override default elementor button [post title] text centering
+*/
+.ehw-text-align-left * {
+  text-align: left;
+}
+
+/*
+
+    [[[[[[[   PLUGIN IMPORTS   ]]]]]]]
+
+*/
+/*
+PLUGIN:  Elementor
+______________________________________________________________________
+
+*/
+/* Featured Guest Names List */
+.ehw-guest-list a.dce-acf-relational-post-link {
+  display: inline-block;
+}
+
+.ehw-guest-list a.dce-acf-relational-post-link:not(:last-child) .elementor-heading-title {
+  margin-right: 0.5em;
+}
+
+.ehw-guest-list a.dce-acf-relational-post-link:not(:last-child) .elementor-heading-title::after {
+  content: ", ";
+}
+
+/* TEXT EDITOR WIDGET: Remove extra space at bottom */
+.elementor-text-editor.elementor-clearfix > p:last-child {
+  margin-bottom: 0;
+}
+
+/* POST GRID WIDGET: Set text background color */
+.elementor-element .eael-grid-post-holder {
+  /* background-color: #FFFFEA !important; */
+}
+
+/* LOOP TEMPLATE: Guest List Loop (Hz) */
+.ehw-guest-loop-hz .ehw--trunc {
+  max-width: 124ch !important;
+}
+
+.ehw-guest-loop-hz .ehw--trunc .elementor-text-editor {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* WELLS PAGE: */
+/* Steve Quote on Wells Page */
+.ehw-bq-style-01 {
+  background: aliceblue;
+}
+
+/* Hover caption on Essential Addons filterable gallery */
+.eael-gallery-grid-item .caption-style-hoverer .fg-item-content {
+  color: #cbebec !important;
+  line-height: 1.2;
+  margin-top: 1rem;
+}
+
+/*
+PLUGIN:  EmbedPress
+______________________________________________________________________
+
+*/
+/*
+PLUGIN:  Echo Knowledge Base
+______________________________________________________________________
+
+*/
+#eckb-article-content {
+  /* HEADINGS */
+  /* IMAGES */
+  /* HEADINGS */
+  /* 
+    MODULE: Table List
+    - A flex list of divs that look like table rows. Used with Echo Knowledge Base plugin
+  */
+  /* TABLE LIST ROW */
+}
+#eckb-article-content h1,
+#eckb-article-content h2,
+#eckb-article-content h3,
+#eckb-article-content h4,
+#eckb-article-content h5,
+#eckb-article-content h6 {
+  margin: 0.3rem 0 1rem 0;
+  padding: 0;
+}
+#eckb-article-content img {
+  border: solid 1px gray;
+  box-shadow: 4px 4px 8px -2px #000000;
+}
+#eckb-article-content img.alignleft {
+  margin: 0;
+}
+#eckb-article-content img.alignright {
+  margin-left: 2.2rem;
+}
+#eckb-article-content .table-list {
+  row-gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+#eckb-article-content h3[data-id^=articleTOC] {
+  background: cadetblue;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  margin: 1em 0;
+}
+#eckb-article-content .table-list .eh-row {
+  background: gainsboro;
+  display: flex;
+  border-bottom: solid 1px brown;
+}
+#eckb-article-content .table-list .eh-col {
+  padding: 1em;
+}
+#eckb-article-content .table-list .eh-col:nth-of-type(2) {
+  flex: 1;
+  border-left: 1px solid;
+}
+#eckb-article-content .table-list img,
+#eckb-article-content .table-list figure {
+  margin: 0;
+}
+#eckb-article-content .table-list img[class^=wp-image] {
+  min-width: 120px;
+  margin: 0;
+}
+#eckb-article-content .table-list img[class^=wp-image] + figcaption {
+  background: aliceblue;
+  text-align: left;
+  display: inline-block;
+  margin: 0;
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 0.4rem;
+}
+#eckb-article-content .table-list ul,
+#eckb-article-content .table-list ol {
+  margin-left: 1em;
+}
+#eckb-article-content .table-list img {
+  box-shadow: none;
+}
+
+/*
+PLUGIN:  Dynamic Content for Elementor Plugin (Dynamic.OOO)
+______________________________________________________________________
+
+*/
+/* Responsive Rumble Vids via DynamicOOO IFRAME widget */
+.dycon-iframe-wrap {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.dycon-iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/*
+
+    [[[[[[[   PAGE IMPORTS   ]]]]]]]
+
+*/
+/*
+PAGE: 🏠 HOME
+______________________________________________________________________
+
+*/
+/* 
+    🛠️ HACK: DISABLE ALL COMMENT FORMS
+    Purpose is to disable errant comment form at bottom of homepage, but may
+    disable all comment forms possibly.
+
+    This code was in: Elementor > Site Settings > Custom CSS
+    Eric Hepperle - 2023-09-22
+
+*/
+#comments {
+  display: none;
+}
+
+/*
+PAGE: Wells
+______________________________________________________________________
+
+*/
+/* Steve Quote on Wells Page */
+.ehw-bq-style-01 {
+  background: aliceblue;
+  /* border: solid; */
+  box-shadow: 2px 2px 4px #ccc;
+  border: solid 1px #0f0f0f;
+}
+
+/*
+
+    [[[[[[[   THEME IMPORTS   ]]]]]]]
+
+*/
+/*
+THEME: Astra
+______________________________________________________________________
+
+*/
+/* 
+    🛠️ HACK: Remove left/right padding from elementor post grid. This is added
+    by Astra theme, so might not be issue with other themes.
+
+*/
+.ast-grid-common-col {
+  padding-left: 0;
+  padding-right: 0;
+}

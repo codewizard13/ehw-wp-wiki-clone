@@ -1,0 +1,71 @@
+/*
+Theme Name: EHW Wiki 2024 GeneratePlus Child
+Theme URI: https://erichepperle.com
+Template: generateplus
+Author: Eric Hepperle
+Author URI: https://erichepperle.com
+
+Description: A GeneratePlus child theme for the EHW Wiki website.
+
+Tags: custom-menu,custom-logo,entertainment,one-column,two-columns,left-sidebar,e-commerce,right-sidebar,custom-colors,editor-style,featured-images,full-width-template,microformats,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready,blog, KB, knowledge-base, wiki, intranet, internal
+Version: 5.21
+
+Updated: 2024-03-27
+
+TESTING ..
+
+*/
+
+
+/******** Table of contents ---------------------------------------
+
+-- base imports
+-- plugin imports
+
+*********/
+
+/*
+
+    [[[[[[[   ADMIN IMPORTS   ]]]]]]]
+    
+*/
+@use './styles/admin';
+
+/*
+
+    [[[[[[[   BASE IMPORTS   ]]]]]]]
+    
+*/
+@use './styles/base';
+@use './styles/pix';
+@use './styles/quotes';
+@use './styles/modules';
+@use './styles/videos';
+@use './styles/sidebar';
+
+/*
+ 
+    [[[[[[[   PLUGIN IMPORTS   ]]]]]]]
+    
+*/
+@use './styles/pi/elementor';
+@use './styles/pi/embedpress';
+@use './styles/pi/echokb';
+@use './styles/pi/dynamico';
+
+
+
+/*
+ 
+    [[[[[[[   PAGE IMPORTS   ]]]]]]]
+    
+*/
+@use './styles/pages/pg-home';
+@use './styles/pages/pg-wells';
+
+/*
+ 
+    [[[[[[[   THEME IMPORTS   ]]]]]]]
+    
+*/
+@use './styles/themes/theme-astra';
