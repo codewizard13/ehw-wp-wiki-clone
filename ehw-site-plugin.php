@@ -2,7 +2,7 @@
 /**
  * 
  * Plugin Name:     EHW Site Plugin
- * Description:     Custom site-specific plugin for ElijahStreams.com. Contains all the custom PHP code for the site.
+ * Description:     Custom site-specific plugin for Eric Hepperle's Wikipedia Clone website. Contains all the custom PHP code for the site.
  * Version:         0.1.05
  * Author:          Eric Hepperle
  * Author URI:      EricHepperle.com
