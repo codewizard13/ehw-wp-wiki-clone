@@ -7,6 +7,7 @@
  * Author:          Eric Hepperle
  * Author URI:      EricHepperle.com
  * 
+ * Text Domain:     ehw-site-plugin
  */
 
 // ADMIN INCLUDES
@@ -21,15 +22,17 @@ require_once (__DIR__ . '/inc/admin-sidebar.php');
 require_once (__DIR__ . '/inc/cpt/cpt-video.php');
 require_once (__DIR__ . '/inc/cpt/cpt-doc.php');
 
+// CUSTOM TAXONOMIES
+require_once (__DIR__ . '/inc/cpt/ctx-doc-topics.php');
+
 
 // ADMIN CPTS
 require_once (__DIR__ . '/inc/admin-edit-cpts.php');
-
 require_once (__DIR__ . '/inc/admin-cpt-guests.php' );
 
 
 // SITEWIDE INCLUDES
-//   - Much of these is peformance-improvement hacks
+//   - Much of these are peformance-improvement hacks
 require_once (__DIR__ . '/inc/sitewide.php');
 
 // SHORTCODE INCLUDES
