@@ -45,5 +45,5 @@ function register_tax_doc_topic() {
     'rewrite_hierarchical' => true,
     'rewrite' => [ 'slug' => 'doc-topics' ]
   ];
-  register_taxonomy( 'doc-topic', [ 'post', 'page', 'video', 'doc' ], $args );
+  register_taxonomy( 'doc-topic', [ 'video', 'doc' ], $args );
 }
