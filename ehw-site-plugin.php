@@ -24,6 +24,7 @@ require_once (__DIR__ . '/inc/cpt/cpt-doc.php');
 
 // CUSTOM TAXONOMIES
 require_once (__DIR__ . '/inc/cpt/ctx-doc-topics.php');
+require_once (__DIR__ . '/inc/cpt/ctx-doc-tags.php');
 
 
 // ADMIN CPTS
