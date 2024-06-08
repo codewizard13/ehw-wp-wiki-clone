@@ -1,8 +1,8 @@
 # Project:        MASTER GITIGNORE FILE
 #
 # This Filename:  .gitignore
-# Date Created:   01/20/23
-# Date Updated:   01/31/23
+# Date Created:   06/08/24
+# Date Updated:   --
 # Programmer:     Eric L. Hepperle
 # 
 # File Version:    1.00.00
@@ -11,6 +11,9 @@
 #   This is the master .gitignore file I created for my own use. You are free to copy and use this file at your own risk.
 #
 # Usage: Rename to .gitignore then use as normal.
+#
+# Resources:
+# - https://chatgpt.com/c/529a0503-3c76-429b-aced-478494130451
 #
 #######################################################
 
@@ -132,6 +135,28 @@ junk/
 #######################################################
 
 
+
+# WordPress Specific #
+#######################################################
+
+# Ignore everything
+*
+
+# Allow specific directories
+!wp-content/
+!wp-content/themes/
+!wp-content/plugins/
+
+# Ignore everything in wp-content except specific directories
+wp-content/*
+!wp-content/themes/ehw-gp-child-wiki/
+!wp-content/plugins/ehw-site-plugin/
+
+# Ignore everything in the theme and plugin directories except their contents
+wp-content/themes/*
+!wp-content/themes/ehw-gp-child-wiki/*
+wp-content/plugins/*
+!wp-content/plugins/ehw-site-plugin/*
 
 ### ------------------------------------------------ ####
 #  This file is always evolving. Refer to the link at
