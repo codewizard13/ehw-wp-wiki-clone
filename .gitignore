@@ -8,7 +8,9 @@
 # File Version:    1.00.00
 # 
 # File Purpose:
-#   This is the master .gitignore file I created for my own use. You are free to copy and use this file at your own risk.
+#  This is the master .gitignore file I created for my own use. You are free
+#  to copy and use this file at your own risk. This version tracks a wordpress
+#  website, but only the site plugin, child theme, and a few specific files.
 #
 # Usage: Rename to .gitignore then use as normal.
 #
