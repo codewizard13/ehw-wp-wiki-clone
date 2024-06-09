@@ -1,0 +1,62 @@
+/*
+PLUGIN:  Elementor
+______________________________________________________________________
+   
+*/
+
+
+/* Featured Guest Names List */
+
+.ehw-guest-list a.dce-acf-relational-post-link {
+  display: inline-block;
+}
+.ehw-guest-list a.dce-acf-relational-post-link:not(:last-child) .elementor-heading-title {
+  margin-right: 0.5em;
+}
+.ehw-guest-list a.dce-acf-relational-post-link:not(:last-child) .elementor-heading-title::after {
+  content: ", ";
+}
+
+
+
+/* TEXT EDITOR WIDGET: Remove extra space at bottom */
+.elementor-text-editor.elementor-clearfix > p:last-child {
+  margin-bottom:0;
+}
+
+
+/* POST GRID WIDGET: Set text background color */
+.elementor-element .eael-grid-post-holder {
+    /* background-color: #FFFFEA !important; */
+}
+
+
+
+/* LOOP TEMPLATE: Guest List Loop (Hz) */
+
+.ehw-guest-loop-hz .ehw--trunc {
+  max-width: 124ch !important;
+
+}
+
+.ehw-guest-loop-hz .ehw--trunc .elementor-text-editor {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+
+
+/* WELLS PAGE: */
+
+/* Steve Quote on Wells Page */
+.ehw-bq-style-01 {
+  background: aliceblue;
+}
+
+/* Hover caption on Essential Addons filterable gallery */
+.eael-gallery-grid-item .caption-style-hoverer .fg-item-content {
+  color: #cbebec !important;
+  line-height: 1.2;
+  margin-top: 1rem;
+}
