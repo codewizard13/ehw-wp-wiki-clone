@@ -1,0 +1,32 @@
+/*
+PIX:  Images, Figures, Pix, Graphics
+______________________________________________________________________
+
+*/
+
+
+/* Images wrapped in a P tag */
+p:has(> img) {
+  margin: 0
+}
+
+
+
+/* GALLERIES */
+
+.gallery-list {
+  background: lightseagreen;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 12.5rem);
+  grid-gap: .5em;
+}
+
+.gallery-list .eh-col {
+  padding: .5em;
+}
+
+.gallery-list .eh-col > * {
+  width: 100%;
+  height: 100%;
+}

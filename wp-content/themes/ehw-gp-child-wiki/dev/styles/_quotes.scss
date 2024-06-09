@@ -1,0 +1,36 @@
+/*
+BLOCKQUOTES: Quotes, messages, callouts
+______________________________________________________________________
+
+*/
+
+.eh-msg {
+  border: solid 2px;
+  padding: .6rem;
+  border-radius: .3rem;
+  margin: 1rem 2rem 2rem 2rem;
+}
+
+.error {
+  color: brown;
+  background: pink;
+}
+
+
+/* BLOCKQUOTE: Error */
+
+.ehw-error {
+  border: solid 1px;
+  background: #834333;
+  color: rgba(255,255,255,.8);
+}
+.ehw-error p {
+  margin-bottom: 0;
+}
+.ehw-error a {
+  color: orange
+}
+
+.ehw-error a:hover {
+  opacity: .4;
+} 

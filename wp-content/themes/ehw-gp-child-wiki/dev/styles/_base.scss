@@ -1,0 +1,38 @@
+/* 
+- Base Styles
+______________________________________________________________________
+
+*/
+
+/* NORMALIZE */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* ATOMIC ELEMENTS */
+
+
+/* Headings */
+
+
+/* COLORS */
+
+
+/* TYPOGRAPHY */
+
+
+/* 
+    🛠️ HACK: Remove margin bottom from (mostly) <P> tags in WordPress.
+    WordPress by default does something called wpautop() which has the
+    effect of adding extra margin-bottom where none is needed. 
+
+*/
+.ehw-mb0,
+.ehw-mb0 p:only-of-type,
+.ehw-mb0 p:last-of-type {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,705 @@
+@charset "UTF-8";
+/*
+Theme Name: EHW Generate Plus Child - Wiki
+Theme URI: https://erichepperle.com
+Template: generatepress
+Author: Eric Hepperle
+Author URI: https://erichepperle.com
+
+Description: A generatepress child theme for Eric Hepperle's Wikipedia clone.
+
+Tags: custom-menu,custom-logo,entertainment,one-column,two-columns,left-sidebar,e-commerce,right-sidebar,custom-colors,editor-style,featured-images,full-width-template,microformats,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready,blog, KB, knowledge-base, wiki, intranet, internal
+Version: 6.01
+
+Updated: 2024-05-30
+
+*/
+/******** Table of contents ---------------------------------------
+
+-- base imports
+-- plugin imports
+
+*********/
+/*
+
+    [[[[[[[   ADMIN IMPORTS   ]]]]]]]
+
+*/
+/*
+
+    [[[[[[[   BASE IMPORTS   ]]]]]]]
+
+*/
+/* 
+- Base Styles
+______________________________________________________________________
+
+*/
+/* NORMALIZE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ATOMIC ELEMENTS */
+/* Headings */
+/* COLORS */
+/* TYPOGRAPHY */
+/* 
+    🛠️ HACK: Remove margin bottom from (mostly) <P> tags in WordPress.
+    WordPress by default does something called wpautop() which has the
+    effect of adding extra margin-bottom where none is needed. 
+
+*/
+.ehw-mb0,
+.ehw-mb0 p:only-of-type,
+.ehw-mb0 p:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/*
+
+BUTTONS: Buttons
+______________________________________________________________________
+
+*/
+/* MAKE ICON appear on right side instead of left on Icon List
+    - Created for Testimonails pg
+*/
+.ehw-btn--icon-right .elementor-icon-list-icon {
+  order: 1;
+  margin-left: 1rem;
+}
+
+/*
+PIX:  Images, Figures, Pix, Graphics
+______________________________________________________________________
+
+*/
+/* Images wrapped in a P tag */
+p:has(> img) {
+  margin: 0;
+}
+
+/* GALLERIES */
+.gallery-list {
+  background: lightseagreen;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 12.5rem);
+  grid-gap: 0.5em;
+}
+
+.gallery-list .eh-col {
+  padding: 0.5em;
+}
+
+.gallery-list .eh-col > * {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+BLOCKQUOTES: Quotes, messages, callouts
+______________________________________________________________________
+
+*/
+.eh-msg {
+  border: solid 2px;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  margin: 1rem 2rem 2rem 2rem;
+}
+
+.error {
+  color: brown;
+  background: pink;
+}
+
+/* BLOCKQUOTE: Error */
+.ehw-error {
+  border: solid 1px;
+  background: #834333;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ehw-error p {
+  margin-bottom: 0;
+}
+
+.ehw-error a {
+  color: orange;
+}
+
+.ehw-error a:hover {
+  opacity: 0.4;
+}
+
+/*
+MODULE STYLES
+- Description: Modules or components are made of multiple elements and can
+  have quite complex styles. Tables are complex enough that they can also be
+  considered a module. Not every HTML with multiple parts are in the MODULE
+  section (e.g., <figure> goes in pix.css). Modules aren't specific to
+  any page, but are somewhat universal.
+______________________________________________________________________
+
+*/
+/* SITE HEADER */
+/* Fixes items sitting on top of submenu during scroll
+Must add class to header or won't work */
+.ehw-header {
+  z-index: 999999;
+}
+
+/* SHORTCODES */
+/* FORMS */
+/* FIX: Remove excess whitespace at top of wpforms forms */
+div.wpforms-container-full {
+  margin: 0 !important;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-page-indicator {
+  margin: 0 !important;
+}
+
+/*
+VIDEOS:
+______________________________________________________________________
+
+*/
+/* 
+    🛠️ HACK: Responsive YouTube embed sizing on Astra theme.
+
+*/
+.ast-oembed-container {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+}
+
+.ast-oembed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/* Responsive Rumble Vids
+- HEPPERLE - Changed 7/5/23 based on support rep hack 
+*/
+.ose-rumble\.com.ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.ose-rumble\.com.ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/* EMBEDPRESS Responsive videos 
+  Eric Hepperle
+**/
+[class*=ose-rumble].ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+[class*=ose-rumble].ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+[class*=ose-youtube].ose-embedpress-responsive {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+[class*=ose-youtube].ose-embedpress-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+.ehw-oembed-rumble {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.ehw-oembed-rumble iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+.ehw-vid-embed {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.ehw-vid-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/*
+SIDEBARS:
+______________________________________________________________________
+
+*/
+/* SIDEBAR 
+Align all children left. Needed to override default elementor button [post title] text centering
+*/
+.ehw-text-align-left * {
+  text-align: left;
+}
+
+/*
+
+    [[[[[[[   PLUGIN IMPORTS   ]]]]]]]
+
+*/
+/*
+PLUGIN:  Elementor
+______________________________________________________________________
+
+*/
+/* Featured Guest Names List */
+.ehw-guest-list a.dce-acf-relational-post-link {
+  display: inline-block;
+}
+
+.ehw-guest-list a.dce-acf-relational-post-link:not(:last-child) .elementor-heading-title {
+  margin-right: 0.5em;
+}
+
+.ehw-guest-list a.dce-acf-relational-post-link:not(:last-child) .elementor-heading-title::after {
+  content: ", ";
+}
+
+/* TEXT EDITOR WIDGET: Remove extra space at bottom */
+.elementor-text-editor.elementor-clearfix > p:last-child {
+  margin-bottom: 0;
+}
+
+/* POST GRID WIDGET: Set text background color */
+.elementor-element .eael-grid-post-holder {
+  /* background-color: #FFFFEA !important; */
+}
+
+/* LOOP TEMPLATE: Guest List Loop (Hz) */
+.ehw-guest-loop-hz .ehw--trunc {
+  max-width: 124ch !important;
+}
+
+.ehw-guest-loop-hz .ehw--trunc .elementor-text-editor {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* FIX: Remove elementor-button default blue background  */
+[class*=ehw-] .elementor-button {
+  background-color: unset;
+}
+
+/*
+PLUGIN:  EmbedPress
+______________________________________________________________________
+
+*/
+/*
+PLUGIN:  Echo Knowledge Base
+______________________________________________________________________
+
+*/
+#eckb-article-content {
+  /* HEADINGS */
+  /* IMAGES */
+  /* HEADINGS */
+  /* 
+    MODULE: Table List
+    - A flex list of divs that look like table rows. Used with Echo Knowledge Base plugin
+  */
+  /* TABLE LIST ROW */
+}
+#eckb-article-content h1,
+#eckb-article-content h2,
+#eckb-article-content h3,
+#eckb-article-content h4,
+#eckb-article-content h5,
+#eckb-article-content h6 {
+  margin: 0.3rem 0 1rem 0;
+  padding: 0;
+}
+#eckb-article-content img {
+  border: solid 1px gray;
+  box-shadow: 4px 4px 8px -2px #000000;
+}
+#eckb-article-content img.alignleft {
+  margin: 0;
+}
+#eckb-article-content img.alignright {
+  margin-left: 2.2rem;
+}
+#eckb-article-content .table-list {
+  row-gap: 0.6rem;
+  display: flex;
+  flex-direction: column;
+}
+#eckb-article-content h3[data-id^=articleTOC] {
+  background: cadetblue;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  margin: 1em 0;
+}
+#eckb-article-content .table-list .eh-row {
+  background: gainsboro;
+  display: flex;
+  border-bottom: solid 1px brown;
+}
+#eckb-article-content .table-list .eh-col {
+  padding: 1em;
+}
+#eckb-article-content .table-list .eh-col:nth-of-type(2) {
+  flex: 1;
+  border-left: 1px solid;
+}
+#eckb-article-content .table-list img,
+#eckb-article-content .table-list figure {
+  margin: 0;
+}
+#eckb-article-content .table-list img[class^=wp-image] {
+  min-width: 120px;
+  margin: 0;
+}
+#eckb-article-content .table-list img[class^=wp-image] + figcaption {
+  background: aliceblue;
+  text-align: left;
+  display: inline-block;
+  margin: 0;
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 0.4rem;
+}
+#eckb-article-content .table-list ul,
+#eckb-article-content .table-list ol {
+  margin-left: 1em;
+}
+#eckb-article-content .table-list img {
+  box-shadow: none;
+}
+
+/*
+PLUGIN:  Dynamic Content for Elementor Plugin (Dynamic.OOO)
+______________________________________________________________________
+
+*/
+/* Responsive Rumble Vids via DynamicOOO IFRAME widget */
+.dycon-iframe-wrap {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-bottom: 56.25%;
+}
+
+.dycon-iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+/*
+
+    [[[[[[[   PAGE IMPORTS   ]]]]]]]
+
+*/
+/*
+PAGE: 🏠 HOME
+______________________________________________________________________
+
+*/
+/* 
+    🛠️ HACK: DISABLE ALL COMMENT FORMS
+    Purpose is to disable errant comment form at bottom of homepage, but may
+    disable all comment forms possibly.
+
+    This code was in: Elementor > Site Settings > Custom CSS
+    Eric Hepperle - 2023-09-22
+
+*/
+/*
+PAGE: Wells
+______________________________________________________________________
+
+*/
+/* Steve Quote on Wells Page */
+.ehw-bq-style-01 {
+  background: aliceblue;
+  /* border: solid; */
+  box-shadow: 2px 2px 4px #ccc;
+  border: solid 1px #0f0f0f;
+}
+
+/* Hover caption on Essential Addons filterable gallery */
+.eael-gallery-grid-item .caption-style-hoverer .fg-item-content {
+  color: #cbebec !important;
+  line-height: 1.2;
+  margin-top: 1rem;
+}
+
+/*
+PAGE: Testimonials
+______________________________________________________________________
+
+*/
+/* TESTIMONIAL PG - FORM */
+/* Style form fields*/
+#ehw-testimonial-form input[id],
+#ehw-testimonial-form textarea,
+#ehw-testimonial-form select {
+  background: var(--e-global-color-1d6d86e);
+}
+
+#ehw-testimonial-form [id] .choices .choices__inner,
+#ehw-testimonial-form .choices .choices__list {
+  background: var(--e-global-color-1d6d86e);
+}
+
+/* TESTIMONIALS CAROUSEL */
+/* Add beginning and ending quotes on testimonials
+    - Disabled currently
+*/
+.testimonial .elementor-widget-theme-post-content {
+  font-family: Arial;
+  padding: 0.8rem;
+}
+
+.testimonial .elementor-widget-theme-post-content:before,
+.testimonial .elementor-widget-theme-post-content:after {
+  color: var(--e-global-color-03ec89f);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  position: absolute;
+  font-size: 2rem;
+}
+
+.testimonial .elementor-widget-theme-post-content:before {
+  /*content: "\f10d";*/
+  /*content: '“';*/
+  /*left: -6px;*/
+  /*top: 9px;*/
+}
+
+.testimonial .elementor-widget-theme-post-content:after {
+  /*content: "\f10e";*/
+  /*content: '”';*/
+  /*right: -1px;*/
+  /*bottom: -2px;*/
+}
+
+/* GOTCHA: This section doesn't seem to apply to current iteration of the carousel
+    but, keep in case we need to reactivate later
+*/
+/* REMOVE left padding from active slide */
+#ehw-testimonials-carousel .swiper-slide-active {
+  padding-left: 0 !important;
+}
+
+/* REMOVE right padding from inner container in testimonial content */
+.testimonial .elementor-widget-theme-post-content .elementor-widget-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* HIGHLIGHT first testimonial in carousel  */
+/* APPLY drop shadow to current element */
+#ehw-testimonials-carousel .swiper-slide-active .ehw-testimonial--quote {
+  /*box-shadow: 2px 2px 6px #333;*/
+}
+
+/* PREVENT box shadow in testimonial carousel being cut off */
+#ehw-testimonials-carousel .swiper-slide {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 0.6rem;
+  /*padding-right: .6rem;*/
+}
+
+/*  CHANGE margin-bottom in testimonails carousel from 1.6rem to 1rem (except the last child which should be zero)  */
+.entry-content #ehw-testimonials-carousel p:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+.entry-content #ehw-testimonials-carousel p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+
+    [[[[[[[   THEME IMPORTS   ]]]]]]]
+
+*/
+/*
+THEME: Astra
+______________________________________________________________________
+
+*/
+/* 
+    🛠️ HACK: Remove left/right padding from elementor post grid. This is added
+    by Astra theme, so might not be issue with other themes.
+
+*/
+.ast-grid-common-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*
+
+    [[[[[[[   OLD POSTS   ]]]]]]]
+
+*/
+/*
+OLD POSTS: Styles that apply to old posts including the re-created
+  post event descriptions.
+______________________________________________________________________
+
+*/
+/* OLD EVENT DESCRIPTIONS */
+.ehw-vid-info {
+  border: solid gainsboro;
+  padding: 1rem;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #141414;
+}
+
+.ehw-vid-info header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* HACK: Removes whitespace from extra P tags WordPress adds  */
+.ehw-vid-info p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.intro-content {
+  margin-bottom: 1rem;
+}
+
+.intro-content p {
+  text-align: left;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.2rem;
+}
+
+.es-intro {
+  color: #000000;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  font-weight: bold;
+  display: block;
+}
+
+img.steve-pic {
+  height: 150px;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+  float: left;
+}
+
+.mcnButton {
+  border: 2px solid #707070;
+  border-radius: 5px;
+  background-color: teal;
+  padding: 1rem;
+  width: 90%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* HACK: Hides extra BR tags WordPress adds  */
+.mcnButton > br {
+  display: none;
+}
+
+.mcnButton:hover {
+  background: teal;
+  opacity: 0.7;
+}
+
+.mcnButton a {
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 23px;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.ehw-vid-info footer {
+  margin-top: 1.2rem;
+}
+
+.ehw-vid-info ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.es-title {
+  color: #f00;
+  font-size: 18px;
+}
+
+.founders-line {
+  color: #800000;
+  font-weight: bold;
+}
+
+.ehw-vid-info hr {
+  text-align: center;
+  margin-left: 0;
+  /* height: 2px; */
+  /* display: block; */
+  background: gainsboro;
+  margin: 0.8rem auto;
+}

@@ -1,0 +1,35 @@
+/*
+MODULE STYLES
+- Description: Modules or components are made of multiple elements and can
+  have quite complex styles. Tables are complex enough that they can also be
+  considered a module. Not every HTML with multiple parts are in the MODULE
+  section (e.g., <figure> goes in pix.css). Modules aren't specific to
+  any page, but are somewhat universal.
+______________________________________________________________________
+
+*/
+
+
+/* SITE HEADER */
+
+/* Fixes items sitting on top of submenu during scroll
+Must add class to header or won't work */
+.ehw-header {
+    z-index: 999999;
+}
+
+
+/* SHORTCODES */
+
+
+
+/* FORMS */
+
+/* FIX: Remove excess whitespace at top of wpforms forms */
+div.wpforms-container-full {
+  margin: 0 !important;
+}
+
+div.wpforms-container-full .wpforms-form .wpforms-page-indicator {
+  margin: 0 !important;
+}

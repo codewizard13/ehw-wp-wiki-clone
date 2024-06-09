@@ -1,0 +1,16 @@
+/*
+THEME: Astra
+______________________________________________________________________
+   
+*/
+
+/* 
+    🛠️ HACK: Remove left/right padding from elementor post grid. This is added
+    by Astra theme, so might not be issue with other themes.
+
+*/
+.ast-grid-common-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+

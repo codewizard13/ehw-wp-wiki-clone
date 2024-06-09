@@ -1,0 +1,18 @@
+/*
+PAGE: 🏠 HOME
+______________________________________________________________________
+   
+*/
+
+/* 
+    🛠️ HACK: DISABLE ALL COMMENT FORMS
+    Purpose is to disable errant comment form at bottom of homepage, but may
+    disable all comment forms possibly.
+    
+    This code was in: Elementor > Site Settings > Custom CSS
+    Eric Hepperle - 2023-09-22
+    
+*/
+#comments {
+  // display: none;
+}

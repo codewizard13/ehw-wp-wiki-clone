@@ -1,0 +1,44 @@
+/*
+⚙️ WP DASHBOARD ADMIN AREA: Backend Styles
+______________________________________________________________________
+
+*/
+
+
+
+/* Style for CUSTOM admin bar post counter nodes */
+li[id^="wp-admin-bar-ehw"],
+li#wp-admin-bar-ehw_videos_count {
+  background: navy !important;
+  border-right: solid white 1px;
+  margin-right: .3rem;
+}
+
+
+
+/* ACF ADMIN PAGE for videos
+
+*/
+[data-name*="rumble"].acf-field-oembed.ehw-max-height-6rem,
+.acf-field-textarea.ehw-max-height-6rem {
+    background: bisque;
+    min-height: 3rem !important;
+    /* height: 10rem !important; */
+    max-height: 400px !important;
+    overflow: hidden !important;
+    border: solid orange 5px;
+    
+}
+
+[data-name*="rumble"] [class*="acf-field-"] {
+    background: bisque;
+    height: 500px !important;
+    overflow: hidden;
+    min-height: 0px;
+    max-height: unset !important;
+    max-height:fit-content !important;
+}
+
+[class*="acf-field-"] iframe.wp-embedded-content {
+    height: clamp(27vh, 400px, 100px);
+}
