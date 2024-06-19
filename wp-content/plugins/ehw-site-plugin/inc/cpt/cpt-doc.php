@@ -51,8 +51,6 @@ function register_cpt_doc() {
 			'revisions',
 		],
 		'taxonomies' => [
-			'category',
-			'post_tag',
 		],
 		'rewrite' => [ 'slug' => 'docs' ]
 	];

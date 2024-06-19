@@ -51,8 +51,6 @@ function register_cpt_video() {
 			'revisions',
 		],
 		'taxonomies' => [
-			'category',
-			'post_tag',
 		],
 		'rewrite' => [ 'slug' => 'videos' ]
 	];
