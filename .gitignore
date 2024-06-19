@@ -194,6 +194,7 @@ yarn-error.log
 !license*
 !Version*
 !wp-content/*debug.log*
+!README.md
 
 
 
