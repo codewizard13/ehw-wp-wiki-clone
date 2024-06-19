@@ -144,6 +144,9 @@ junk/
 # Ignore everything in the root directory
 /*
 
+# Except notes folder
+!notes/
+
 # Except wp-content
 !wp-content/
 
