@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="notes.css" />
 
-# TUTORIAL NOTES
+# ERIC'S NOTES
 
 <a id="top-bookmark-btn" class="bookmark-link" href="#bookmark">JUMP TO BOOKMARK</a>
 
